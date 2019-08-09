@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "头条小程序审核通知",
+  "description": "头条小程序审核状态变更时候获取通知",
+  "version": "0.0.2",
+  "icons": {
+    "16": "img/logo.png"
+  },
+  "browser_action": {
+    "default_icon": "img/logo.png",
+    "default_title": "头条小程序审核通知",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "notifications"
+  ],
+  "content_scripts": [{
+    "matches": ["*://developer.toutiao.com/app/publish/*"],
+    "js": ["js/jquery-3.4.1.min.js", "js/watch.js"],
+    "run_at": "document_start"
+  }],
+  "background" : {
+    "scripts": ["js/background.js"],
+    "persistent": false
+}
+}

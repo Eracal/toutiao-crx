@@ -1,0 +1,58 @@
+body {
+  width: 300px;
+  font-size: 16px;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+
+  overflow: hidden;
+  
+  background-image: radial-gradient(
+    circle at 200px -10px, #3bc1ff, #3bc1ff 99px, transparent 100px),
+    radial-gradient(circle at -80px 200px, #9ddd75, #9ddd75 129px, transparent 130px),
+    radial-gradient(circle at 240px 460px, #f7c373, #f7c373 149px, transparent 150px);
+  background-repeat: no-repeat;
+}
+
+header {
+  position: relative;
+}
+
+header img{
+  width: 100%;
+}
+
+h1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 20px;
+  color: #fff;
+}
+
+#notice {
+  margin-left: 5px;
+}
+
+.qrcode {
+  
+}
+
+.qrcode .qrcodeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.qrcodeContainer img{
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  box-shadow: 0 0 5px 2px rgb(100, 181, 247, 0.3);
+}
